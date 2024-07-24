@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require './lib/bottles_text/zero_bottles_text'
+require './lib/bottles_text/bottles_text'
 
 class ZeroBottlesText < BottlesText # rubocop:disable Style/Documentation
   def bottles

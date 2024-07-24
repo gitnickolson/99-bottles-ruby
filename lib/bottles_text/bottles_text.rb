@@ -27,6 +27,6 @@ class BottlesText # rubocop:disable Style/Documentation
   end
 
   def third_line
-    "Take one down, pass it around,"
+    'Take one down, pass it around,'
   end
 end

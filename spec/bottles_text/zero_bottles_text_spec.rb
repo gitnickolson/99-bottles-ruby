@@ -3,11 +3,11 @@
 require 'rspec'
 require './lib/bottles_text/zero_bottles_text'
 
-RSpec.describe ZeroBottlesText do # rubocop:disable Metrics/BlockLength
+RSpec.describe ZeroBottlesText do
   describe '#next_bottle_number' do
     it 'returns 99' do
-        expect(ZeroBottlesText.new(0).next_bottle_number).to eq(99)
-      end
+      expect(ZeroBottlesText.new(0).next_bottle_number).to eq(99)
+    end
   end
 
   describe '#bottles_text' do
