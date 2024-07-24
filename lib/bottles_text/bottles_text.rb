@@ -19,7 +19,7 @@ class BottlesText # rubocop:disable Style/Documentation
   end
 
   def bottles
-    number == 6 ? '1 six pack' : "#{number} bottles_text"
+    number == 6 ? '1 six pack' : "#{number} bottles"
   end
 
   def next_bottle_number

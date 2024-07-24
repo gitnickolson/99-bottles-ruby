@@ -4,7 +4,7 @@ require './lib/bottles_text/bottles_text'
 
 class ZeroBottlesText < BottlesText # rubocop:disable Style/Documentation
   def bottles
-    'no more bottles_text'
+    'no more bottles'
   end
 
   def next_bottle_number

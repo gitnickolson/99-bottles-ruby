@@ -12,7 +12,7 @@ RSpec.describe ZeroBottlesText do
 
   describe '#bottles_text' do
     it 'returns no more bottles_text' do
-      expect(ZeroBottlesText.new(0).bottles).to eq 'no more bottles_text'
+      expect(ZeroBottlesText.new(0).bottles).to eq 'no more bottles'
     end
   end
 

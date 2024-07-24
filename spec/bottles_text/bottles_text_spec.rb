@@ -45,7 +45,7 @@ RSpec.describe BottlesText do # rubocop:disable Metrics/BlockLength
 
   describe '#bottles_text' do
     it 'returns the bottle count' do
-      expect(BottlesText.new(99).bottles).to eq '99 bottles_text'
+      expect(BottlesText.new(99).bottles).to eq '99 bottles'
     end
 
     context 'when number is 6' do
