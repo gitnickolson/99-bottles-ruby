@@ -20,7 +20,7 @@ class Song # rubocop:disable Style/Documentation
   end
 end
 
-puts 'Enter numbers between 99 and 1'
+puts 'Enter numbers between 99 and 0 (inclusive)'
 puts 'Start verse number:'
 range_start = gets.chomp.to_i
 puts 'End verse number:'
