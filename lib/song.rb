@@ -10,13 +10,12 @@ class Song # rubocop:disable Style/Documentation
   end
 
   def verse(number)
-    text = BottlesText.for(number)
-    next_text = BottlesText.for(text.next_bottle_number)
+    bottles_text = BottlesText.for(number)
 
-    "#{text.bottles.capitalize} of beer on the wall,\n" \
-    "#{text.bottles} of beer.\n" \
-    "#{text.third_line}\n" \
-    "#{next_text.bottles} of beer on the wall."
+    bottles_text.to_s.capitalize + " of beer on the wall,\n" \
+    "#{bottles_text} of beer.\n" \
+    "#{bottles_text.third_line}\n" \
+    "#{bottles_text.next_bottle_number} of beer on the wall."
   end
 end
 

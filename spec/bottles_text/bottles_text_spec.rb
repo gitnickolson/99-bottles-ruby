@@ -38,8 +38,8 @@ RSpec.describe BottlesText do # rubocop:disable Metrics/BlockLength
   end
 
   describe '#next_bottle_number' do
-    it 'returns the next bottle number' do
-      expect(BottlesText.new(99).next_bottle_number).to eq 98
+    it 'returns the next bottle number obhect' do
+      expect(BottlesText.new(99).next_bottle_number).to have_attributes(number: 98)
     end
   end
 

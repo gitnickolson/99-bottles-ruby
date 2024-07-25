@@ -18,15 +18,8 @@ class BottlesText # rubocop:disable Style/Documentation
     end
   end
 
-  def bottles
-    number == 6 ? '1 six pack' : "#{number} bottles"
-  end
-
-  def next_bottle_number
-    number - 1
-  end
-
-  def third_line
-    'Take one down, pass it around,'
-  end
+  def bottles = number == 6 ? '1 six pack' : "#{number} bottles"
+  def next_bottle_number = BottlesText.for(number - 1)
+  def third_line = 'Take one down, pass it around,'
+  def to_s = bottles
 end

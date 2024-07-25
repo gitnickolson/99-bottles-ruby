@@ -5,8 +5,8 @@ require './lib/bottles_text/one_bottle_text'
 
 RSpec.describe OneBottleText do
   describe '#next_bottle_number' do
-    it 'returns 0' do
-      expect(OneBottleText.new(1).next_bottle_number).to eq(0)
+    it 'returns bottle number object with number 0' do
+      expect(OneBottleText.new(1).next_bottle_number).to have_attributes(number: 0)
     end
   end
 

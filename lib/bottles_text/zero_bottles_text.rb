@@ -3,15 +3,7 @@
 require './lib/bottles_text/bottles_text'
 
 class ZeroBottlesText < BottlesText # rubocop:disable Style/Documentation
-  def bottles
-    'no more bottles'
-  end
-
-  def next_bottle_number
-    99
-  end
-
-  def third_line
-    'Go to the store and buy some more,'
-  end
+  def bottles = 'no more bottles'
+  def next_bottle_number = BottlesText.for(99)
+  def third_line = 'Go to the store and buy some more,'
 end
