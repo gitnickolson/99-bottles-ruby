@@ -32,7 +32,8 @@ class BottlesText
     @bottles_text_classes ||= [self]
   end
 
-  def self.register(candidate)
+  def self.inherited(candidate)
+    super
     bottles_text_classes.prepend(candidate)
   end
 end
