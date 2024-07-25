@@ -2,6 +2,9 @@
 
 require 'rspec'
 require './lib/bottles_text/bottles_text'
+require './lib/bottles_text/zero_bottles_text'
+require './lib/bottles_text/one_bottle_text'
+require './lib/bottles_text/six_bottles_text'
 
 RSpec.describe BottlesText do
   describe '.for' do
@@ -51,6 +54,12 @@ RSpec.describe BottlesText do
   describe '.handles?' do
     it 'returns true' do
       expect(described_class.handles?(5)).to be true
+    end
+  end
+
+  describe '.bottles_text_classes' do
+    it 'returns an array containing the registered classes' do
+      expect(described_class.bottles_text_classes).to eq [SixBottlesText, OneBottleText, ZeroBottlesText, BottlesText]
     end
   end
 
