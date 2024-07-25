@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
+require './lib/bottles_text/bottles_text'
 require './lib/bottles_text/zero_bottles_text'
 require './lib/bottles_text/one_bottle_text'
 require './lib/bottles_text/six_bottles_text'
-require './lib/bottles_text/bottles_text'
 
 class Song
   def verses(range_start:, range_end:)
@@ -19,11 +19,3 @@ class Song
     "#{bottles_text.next_bottle_number} of beer on the wall."
   end
 end
-
-puts 'Enter numbers between 99 and 0 (inclusive)'
-puts 'Start verse number:'
-range_start = gets.chomp.to_i
-puts 'End verse number:'
-range_end = gets.chomp.to_i
-
-puts Song.new.verses(range_start:, range_end:)

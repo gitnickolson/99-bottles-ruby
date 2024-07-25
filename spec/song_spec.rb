@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rspec'
-require_relative '../lib/song'
+require './lib/song'
 
 RSpec.describe Song do
   describe '#verse' do
@@ -41,20 +41,20 @@ RSpec.describe Song do
       expect(Song.new.verse(99)).to eq(expectation)
     end
 
-    it "replaces 'six bottles' with '1 six pack' if number is 6" do
-      expectation = "1 six pack of beer on the wall,\n" \
-                    "1 six pack of beer.\n" \
+    it "replaces 'six bottles' with '1 six-pack' if number is 6" do
+      expectation = "1 six-pack of beer on the wall,\n" \
+                    "1 six-pack of beer.\n" \
                     "Take one down, pass it around,\n" \
                     '5 bottles of beer on the wall.'
 
       expect(Song.new.verse(6)).to eq(expectation)
     end
 
-    it "replaces 'six bottles' with '1 six pack' if number is 7" do
+    it "replaces 'six bottles' with '1 six-pack' if number is 7" do
       expectation = "7 bottles of beer on the wall,\n" \
                     "7 bottles of beer.\n" \
                     "Take one down, pass it around,\n" \
-                    '1 six pack of beer on the wall.'
+                    '1 six-pack of beer on the wall.'
 
       expect(Song.new.verse(7)).to eq(expectation)
     end
@@ -108,9 +108,9 @@ RSpec.describe Song do
                     "7 bottles of beer on the wall,\n" \
                     "7 bottles of beer.\n" \
                     "Take one down, pass it around,\n" \
-                    "1 six pack of beer on the wall.\n" \
-                    "1 six pack of beer on the wall,\n" \
-                    "1 six pack of beer.\n" \
+                    "1 six-pack of beer on the wall.\n" \
+                    "1 six-pack of beer on the wall,\n" \
+                    "1 six-pack of beer.\n" \
                     "Take one down, pass it around,\n" \
                     "5 bottles of beer on the wall.\n" \
                     "5 bottles of beer on the wall,\n" \

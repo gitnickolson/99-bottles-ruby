@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 require 'rspec'
-require './lib/bottles_text/one_bottle_text'
 require './lib/bottles_text/bottles_text'
+require './lib/bottles_text/one_bottle_text'
 
 RSpec.describe OneBottleText do
   it 'inherits from BottlesText' do
