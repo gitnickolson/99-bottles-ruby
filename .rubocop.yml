@@ -1,0 +1,11 @@
+Style/RedundantInterpolation:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Layout/LineEndStringConcatenationIndentation:
+  Enabled: false
+Metrics/BlockLength:
+  Enabled: false
+AllCops:
+  SuggestExtensions: false
+  NewCops: enable

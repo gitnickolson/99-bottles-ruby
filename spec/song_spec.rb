@@ -3,8 +3,8 @@
 require 'rspec'
 require_relative '../lib/song'
 
-RSpec.describe Song do # rubocop:disable Metrics/BlockLength
-  describe '#verse' do # rubocop:disable Metrics/BlockLength
+RSpec.describe Song do
+  describe '#verse' do
     it 'returns the first verse when given 3' do
       expectation = "3 bottles of beer on the wall,\n" \
                     "3 bottles of beer.\n" \
@@ -69,7 +69,7 @@ RSpec.describe Song do # rubocop:disable Metrics/BlockLength
     end
   end
 
-  describe '#verses' do # rubocop:disable Metrics/BlockLength
+  describe '#verses' do
     context 'for a given range'
     it 'returns correct verses for range 99 to 94' do
       expectation = "99 bottles of beer on the wall,\n" \
@@ -100,7 +100,7 @@ RSpec.describe Song do # rubocop:disable Metrics/BlockLength
       expect(Song.new.verses(range_start: 99, range_end: 94)).to eq(expectation)
     end
 
-    it 'returns correct verses for range 8 to 0' do # rubocop:disable Metrics/BlockLength
+    it 'returns correct verses for range 8 to 0' do
       expectation = "8 bottles of beer on the wall,\n" \
                     "8 bottles of beer.\n" \
                     "Take one down, pass it around,\n" \

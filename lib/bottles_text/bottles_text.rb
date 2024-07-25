@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class BottlesText # rubocop:disable Style/Documentation
+class BottlesText
   attr_reader :number
 
   def initialize(number)
@@ -13,12 +13,14 @@ class BottlesText # rubocop:disable Style/Documentation
       ZeroBottlesText.new(number)
     when 1
       OneBottleText.new(number)
+    when 6
+      SixBottlesText.new(number)
     else
       BottlesText.new(number)
     end
   end
 
-  def bottles = number == 6 ? '1 six pack' : "#{number} bottles"
+  def bottles = "#{number} bottles"
   def next_bottle_number = BottlesText.for(number - 1)
   def third_line = 'Take one down, pass it around,'
   def to_s = bottles
