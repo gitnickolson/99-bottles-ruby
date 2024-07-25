@@ -30,7 +30,7 @@ RSpec.describe BottlesText do
         allow(OneBottleText).to receive(:new)
       end
 
-      it 'initializes OneBottlesText class' do
+      it 'initializes OneBottleText class' do
         described_class.for(1)
         expect(OneBottleText).to have_received(:new)
       end
@@ -41,10 +41,22 @@ RSpec.describe BottlesText do
         allow(SixBottlesText).to receive(:new)
       end
 
-      it 'initializes ZeroBottlesText class' do
+      it 'initializes SixBottlesText class' do
         described_class.for(6)
         expect(SixBottlesText).to have_received(:new)
       end
+    end
+  end
+
+  describe '.handles?' do
+    it 'returns true' do
+      expect(described_class.handles?(5)).to be true
+    end
+  end
+
+  describe '#bottles' do
+    it 'returns the bottle count' do
+      expect(described_class.new(99).bottles).to eq '99 bottles'
     end
   end
 
@@ -54,15 +66,15 @@ RSpec.describe BottlesText do
     end
   end
 
-  describe '#bottles_text' do
-    it 'returns the bottle count' do
-      expect(described_class.new(99).bottles).to eq '99 bottles'
-    end
-  end
-
   describe '#third_line' do
     it 'returns the third line text' do
       expect(described_class.new(99).third_line).to eq 'Take one down, pass it around,'
+    end
+  end
+
+  describe '#to_s' do
+    it 'returns a string of the bottle count' do
+      expect(described_class.new(99).to_s).to eq '99 bottles'
     end
   end
 end

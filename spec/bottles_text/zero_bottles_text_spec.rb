@@ -9,6 +9,20 @@ RSpec.describe ZeroBottlesText do
     expect(described_class).to be < BottlesText
   end
 
+  describe '.handles?' do
+    context 'when number is 0' do
+      it 'returns true' do
+        expect(described_class.handles?(0)).to be true
+      end
+    end
+
+    context 'when number is not 0' do
+      it 'returns false' do
+        expect(described_class.handles?(77)).to be false
+      end
+    end
+  end
+
   describe '#next_bottle_number' do
     it 'returns bottle number object with number 99' do
       expect(described_class.new(0).next_bottle_number).to have_attributes(number: 99)

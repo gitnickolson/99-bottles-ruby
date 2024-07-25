@@ -6,8 +6,6 @@ Layout/LineEndStringConcatenationIndentation:
   Enabled: false
 Metrics/BlockLength:
   Enabled: false
-Style/Lambda:
-  Enabled: false
 AllCops:
   SuggestExtensions: false
   NewCops: enable

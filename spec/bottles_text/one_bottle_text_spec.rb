@@ -9,6 +9,20 @@ RSpec.describe OneBottleText do
     expect(described_class).to be < BottlesText
   end
 
+  describe '.handles?' do
+    context 'when number is 1' do
+      it 'returns true' do
+        expect(described_class.handles?(1)).to be true
+      end
+    end
+
+    context 'when number is not 0' do
+      it 'returns false' do
+        expect(described_class.handles?(92)).to be false
+      end
+    end
+  end
+
   describe '#bottles_text' do
     it 'returns 1 bottle text' do
       expect(described_class.new(1).bottles).to eq '1 bottle'
